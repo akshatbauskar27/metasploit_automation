@@ -7,4 +7,8 @@ This script is used for automating metasploit framework with the python module
 ``` git clone https://github.com/akshatbauskar27/metasploit_automation.git ``` <br>
 ``` pip install -r requirements.txt``` <br>
 ``` python py_meta.py ``` 
+
+# Usage
+
 ![Screenshot](data/usage.JPG)
+
