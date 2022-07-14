@@ -1,4 +1,4 @@
-import os
+import os, getpass
 import re
 import sys
 import logging
@@ -28,7 +28,7 @@ def list_service(data,services,client):
 		listing_exp=client.modules.exploits
 		matches=[match for match in listing_exp if services in match]
 		for i in matches:
-			print ("Available explois: ", i)
+			print ("Available exploit: ", i)
 	elif "auxiliary" in data:
 		listing_aux=client.modules.auxiliary
 		matches=[match for match in listing_aux if services in match]
@@ -97,8 +97,10 @@ def main():
 				format = '%(levelname)s:%(asctime)s:%(message)s')
 	now = datetime.now()
 	dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+	env_tinks = os.getlogin()
 #	logging.info("Script started at %s", dt_string)
 	logging.info("================================ Starting Script ===============================================")
+	logging.info("Script was run by %s at %s", env_tinks, dt_string)
 	logging.info ("Initiating connetion between metasploit and script")
 	cmd = 'msfconsole -q -x' + " " + '"load msgrpc' + " " + "[" + "Pass" + "=" + "rootroot" +"];" + " " + 'exit -y"' + " " + ">" + " " "/dev/null"
 	cmd1 = "msfrpcd -P " + "rootroot" + " " +  "-S" + " "  +  "2> output.txt"
