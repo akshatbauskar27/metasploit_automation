@@ -97,7 +97,7 @@ def main():
 				format = '%(levelname)s:%(asctime)s:%(message)s')
 	now = datetime.now()
 	dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-	env_tinks = os.getlogin()
+	env_tinks = getpass.getuser()
 #	logging.info("Script started at %s", dt_string)
 	logging.info("================================ Starting Script ===============================================")
 	logging.info("Script was run by %s at %s", env_tinks, dt_string)
