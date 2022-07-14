@@ -1,4 +1,4 @@
-# metasploit_automation
+# Metasploit_automation
 
 This script is used for automating metasploit framework with the python module
 
@@ -10,5 +10,12 @@ This script is used for automating metasploit framework with the python module
 
 # Usage
 
-![Screenshot](data/usage.JPG)
+## Help section
+<img src="https://github.com/akshatbauskar27/metasploit_automation/blob/main/data/usage.JPG" width="800" height="350">
+
+## Command execution
+<img src="https://github.com/akshatbauskar27/metasploit_automation/blob/main/data/script.JPG" width="800" height="350">
+
+## Logs
+<img src="https://github.com/akshatbauskar27/metasploit_automation/blob/main/data/log.JPG" width="800" height="350">
 
